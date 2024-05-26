@@ -161,3 +161,26 @@ export const useStarbucksData = () => {
     filteredProductItems: currentItems,
   };
 };
+
+export function GreenCircle(count: number) {
+  if (Number.isInteger(count) && count > 0) {
+    const greenCircles = [];
+    for (let i = 0; i < count; i++) {
+      greenCircles.push(
+        <div
+          style={{
+            width: "20px",
+            height: "20px",
+            backgroundColor: "#198754",
+            borderRadius: "50%",
+            margin: "5px",
+            display: "inline-block",
+          }}
+        ></div>
+      );
+    }
+    return greenCircles;
+  } else {
+    return <div>Please provide a valid positive integer.</div>;
+  }
+}

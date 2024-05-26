@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import { useDetailData } from "../util";
+import { GreenCircle, useDetailData } from "../util";
 import styles from "../../../style/Detail.module.css";
 
 const Detail: React.FC = () => {
@@ -79,10 +79,13 @@ const Detail: React.FC = () => {
                     </Col>
                   </Row>
                   <Card.Text className={styles.detailText}>
-                    <strong>Roast Level:</strong> {roast_level}
+                    <strong>Roast Level:</strong> <br />
+                    {GreenCircle(roast_level)}
                   </Card.Text>
                   <Card.Text className={styles.detailPrice}>
-                    Price: ${price.toFixed(2)}
+                    <strong>Price:</strong>
+                    <br />
+                    {Math.floor(price * 36.64)} Baht
                   </Card.Text>
                 </Col>
               </Row>
