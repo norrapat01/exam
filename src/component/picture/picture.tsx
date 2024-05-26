@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
+import "./ImageSlider.css"; // Ensure you import the CSS file
 import { CustomNextArrow, CustomPrevArrow } from "./arrow";
 
 const ImageSlider = ({ images }: { images: string[] }) => {
@@ -14,7 +15,7 @@ const ImageSlider = ({ images }: { images: string[] }) => {
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
-    initialSlide: currentIndex, 
+    initialSlide: currentIndex,
   };
 
   useEffect(() => {
