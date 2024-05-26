@@ -1,13 +1,13 @@
 import React from "react";
 import image from "../assert/reserve-coffee-2-1200x800.jpg";
-import "../style/Advertise.module.css"; // Import CSS for styling
+import style from"../style/Advertise.module.css"; // Import CSS for styling
 
 const Advertise: React.FC = () => {
   return (
     <div className="advertise">
       <div className="row">
         <div className="col position-relative">
-          <div className="image-container">
+          <div className={style.imageContainer}>
             <img
               src={image}
               alt="Starbucks Reserve"
@@ -18,7 +18,7 @@ const Advertise: React.FC = () => {
                   "brightness(100%) contrast(50%) grayscale(50%) sepia(20%)",
               }}
             />
-            <div className="text-overlay">
+            <div className={style.textOverlay}>
               <div
                 style={{
                   textAlign: "left",

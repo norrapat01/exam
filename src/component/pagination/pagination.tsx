@@ -1,16 +1,14 @@
 import React from "react";
 import { Pagination, Row } from "react-bootstrap";
 
-interface PaginationProps {
-  totalPages: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
-}
-
-const PaginationComponent: React.FC<PaginationProps> = ({
+const PaginationComponent = ({
   totalPages,
   currentPage,
   onPageChange,
+}: {
+  totalPages: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
 }) => {
   return (
     <Row className="justify-content-center mt-4">

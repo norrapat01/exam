@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { getStarbucksDataByName } from "src/api/api.route";
 import style from "../../style/SearchBar.module.css";
-interface SearchBarProps {
-  setResults: (results: any[]) => void; // Define the type of the setResults prop
-}
 
-const SearchBar: React.FC<SearchBarProps> = ({ setResults }) => {
+const SearchBar = ({
+  setResults,
+}: {
+  setResults: (results: any[]) => void;
+}) => {
   const [input, setInput] = useState<string>("");
 
   let data;
@@ -41,7 +42,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ setResults }) => {
       <nav className="navbar bg-body-tertiary w-100">
         <div className="container-fluid">
           <form className="d-flex w-100" role="search">
-            <button className="btn btn-outline-success w-10" onClick={handleClear}>
+            <button
+              className="btn btn-outline-success w-10"
+              onClick={handleClear}
+            >
               Clear
             </button>
             <input
@@ -50,7 +54,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ setResults }) => {
               value={input}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className="btn btn-outline-secondary w-10" onClick={handleSearchClick}>
+            <button
+              className="btn btn-outline-secondary w-10"
+              onClick={handleSearchClick}
+            >
               Search
             </button>
           </form>

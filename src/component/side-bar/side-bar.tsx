@@ -1,16 +1,6 @@
-import React from "react";
 import style from "./SideBar.module.css";
-interface FilterProps {
-  regions: string[];
-  selectedRegions: string;
-  onRegionChange: (region: string) => void;
-  grindOptions: string[];
-  selectedGrindOptions: string;
-  onGrindChange: (grindOption: string) => void;
-  onClearFilters: () => void;
-}
 
-const SideBar: React.FC<FilterProps> = ({
+const SideBar = ({
   regions,
   grindOptions,
   selectedRegions,
@@ -18,6 +8,14 @@ const SideBar: React.FC<FilterProps> = ({
   onRegionChange,
   onGrindChange,
   onClearFilters,
+}: {
+  regions: string[];
+  selectedRegions: string;
+  onRegionChange: (region: string) => void;
+  grindOptions: string[];
+  selectedGrindOptions: string;
+  onGrindChange: (grindOption: string) => void;
+  onClearFilters: () => void;
 }) => {
   const handleRegionCheckboxChange = (region: string) => {
     onRegionChange(region);
@@ -59,7 +57,7 @@ const SideBar: React.FC<FilterProps> = ({
               checked={selectedGrindOptions.includes(grindOption)}
               onChange={() => handleGrindCheckboxChange(grindOption)}
             />
-            <label htmlFor={grindOption} >{grindOption}</label>
+            <label htmlFor={grindOption}>{grindOption}</label>
           </div>
         ))}
       </div>

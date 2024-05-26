@@ -1,17 +1,17 @@
-.image-container {
+.imageContainer {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.image-container img {
+.imageContainer img {
   width: 100%;
   height: 600px;
   object-fit: cover;
 }
 
-.text-overlay {
+.textOverlay {
   position: absolute;
   top: 50%;
   left: 50%;
