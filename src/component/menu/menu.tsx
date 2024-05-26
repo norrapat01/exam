@@ -41,20 +41,19 @@ const Menu = () => {
           <SearchBar setResults={handleSearchBar} />
           <div className="container">
             <SearchList results={searchResults} />
-            <Row className="justify-content-center">
+            <Row className="justify-content-center m-lg-5">
               {filteredProductItems?.map((value) => (
                 <Col md={4} key={value.id}>
                   <Card
-                    className="mb-4"
+                    className={styles.menu}
                     onClick={() => handleCardClick(value.id)}
-                    style={{ cursor: "pointer" }}
                   >
                     <Card.Img
                       variant="top"
                       src={value.image_url}
                       className={styles.imageContainer}
                       style={{
-                        width: "100%",
+                        width: "auto",
                         height: "12rem",
                         objectFit: "cover",
                       }}
@@ -76,11 +75,11 @@ const Menu = () => {
               ))}
             </Row>
             <div className="d-flex justify-content-center">
-            <PaginationComponent
-              totalPages={totalPages}
-              currentPage={currentPage}
-              onPageChange={handlePageChange}
-            />
+              <PaginationComponent
+                totalPages={totalPages}
+                currentPage={currentPage}
+                onPageChange={handlePageChange}
+              />
             </div>
           </div>
         </Col>

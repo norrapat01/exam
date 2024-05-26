@@ -1,27 +1,33 @@
 .btn {
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    gap: 2;
-    background-color: #D6D6D6;
-    color: rgb(2, 2, 2);
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  gap: 2;
+  background-color: #D6D6D6;
+  color: rgb(2, 2, 2);
+
 }
 
 .btn:hover {
-    color: white;
-    background-color: #404040;
+  color: white;
+  background-color: #404040;
 
 }
 
 .checkboxContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .checkboxContainer input[type="checkbox"] {
-    margin-right: 5px; 
-  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-  h4{
-    text-align: left;
-  }
+.checkboxContainer:last-child {
+  margin-bottom: 30px;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+h4 {
+  text-align: left;
+}

@@ -49,7 +49,7 @@ const SideBar = ({
       <div>
         <h4>Grind Option</h4>
         {grindOptions.map((grindOption) => (
-          <div key={grindOption} className={style.checkboxContainer}>
+          <div key={grindOption} className={style.checkboxContainer} >
             <input
               type="checkbox"
               id={grindOption}
@@ -67,7 +67,7 @@ const SideBar = ({
         data-mdb-ripple-init
         onClick={onClearFilters}
       >
-        Clear
+        Clear Filter
       </button>
     </div>
   );

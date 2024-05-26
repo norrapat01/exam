@@ -23,7 +23,6 @@ const Advertise: React.FC = () => {
                 style={{
                   textAlign: "left",
                   color: "white",
-                  marginLeft: "-150px",
                 }}
               >
                 <h2>STARBUCKS RESERVE</h2>

@@ -81,3 +81,15 @@
 .imageContainer {
   background-color: #28724F;
 }
+
+.menu {
+  margin-bottom: 20px;
+  width: 15rem;
+  text-Align: left;
+  transition: box-shadow 0.3s ease;
+}
+
+.menu:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
