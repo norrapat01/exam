@@ -1,0 +1,14 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+a {
+  @apply text-blue-500;
+  @apply cursor-pointer;
+}
+
+.md-label {
+  @apply absolute;
+  pointer-events: block;
+  transform: translate(0, -24px) scale(1);
+}

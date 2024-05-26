@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DB_HelvethaicaMon_X" !important;
+  line-height: 1.25;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield !important;
+  }
+}
+
+ul > li {
+  position: "relative";
+}
+.html-preview > ul > li::before {
+  content: "\2022   ";
+}
+
+@layer components {
+  .card-style {
+    @apply w-full bg-white shadow-md rounded;
+  }
+}
+
+@layer components {
+  .form-style {
+    @apply px-32px py-24px;
+  }
+}

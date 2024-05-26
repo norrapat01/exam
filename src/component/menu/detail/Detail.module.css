@@ -1,0 +1,75 @@
+.detailContainer {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.detailCard {
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.detailImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid;
+  background-image: linear-gradient(
+    to bottom right,
+    #ffe0e0,
+    #ffe8c0,
+    #fff0a0,
+    #e8f0a0,
+    #d0ffbf,
+    #b0f0ff,
+    #c0c0ff
+  );
+  background-clip: padding-box;
+}
+
+.detailTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.detailDescription {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.detailFlavor,
+.detailGrind,
+.detailText {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.detailHeading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.detailPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 10px;
+}
+
+.detailStock {
+  font-size: 1rem;
+  color: #dc3545;
+  margin-top: 10px;
+}
+
+.grid {
+  background-color: #000;
+  color: #fff;
+  padding: 0.25em 0.5em;
+  border-radius: 15px;
+  display: inline-block;
+}
