@@ -78,15 +78,30 @@ const Detail: React.FC = () => {
                       </Card.Text>
                     </Col>
                   </Row>
-                  <Card.Text className={styles.detailText}>
-                    <strong>Roast Level:</strong> <br />
-                    {GreenCircle(roast_level)}
-                  </Card.Text>
-                  <Card.Text className={styles.detailPrice}>
-                    <strong>Price:</strong>
-                    <br />
-                    {Math.floor(price * 36.64)} Baht
-                  </Card.Text>
+                  <Row style={{ marginBottom: "10px" }}>
+                    <Col md={6}>
+                      <Card.Text className={styles.detailText}>
+                        <strong>Roast Level:</strong> <br />
+                        {GreenCircle(roast_level)}
+                      </Card.Text>
+                    </Col>
+
+                    <Col md={6} className="text-right">
+                      <Card.Text className={styles.detailText}>
+                        <strong>Stock:</strong> <br />
+                        {stock}
+                      </Card.Text>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={11}>
+                      <Card.Text className={styles.detailPrice}>
+                        <strong>Price</strong>
+                        <br />
+                        {Math.floor(price * 36.64)} Baht
+                      </Card.Text>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
             </Card.Body>
