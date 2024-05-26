@@ -1,14 +1,6 @@
-import React, { useEffect, useState } from "react";
+import Menu from "../component/menu/menu";
+import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { fetchStarbucksData } from "src/api/api.route";
-import { Item } from "src/interface/ProductItem";
-import Detail from "./menu/detail/detail";
-import Sidebar from "./side-bar/side-bar";
-import Menu from "./menu/menu";
-import SearchBar from "./search/searchBar";
-import SearchResults from "./search/searchList";
-import SidebarWithMenu from "./side-bar/sidebarWithMenu";
-
 const ResponsiveContainer: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -27,9 +19,7 @@ const ResponsiveContainer: React.FC<{ children: React.ReactNode }> = ({
               >
                 <Card className="border-0 h-auto d-flex justify-content-center px-4 py-5 pt-5">
                   <Row>
-                    <Col md={12}>
-                      <SidebarWithMenu />
-                    </Col>
+                    <Col md={12}>{children}</Col>
                   </Row>
                 </Card>
               </div>

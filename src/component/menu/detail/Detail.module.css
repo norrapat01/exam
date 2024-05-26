@@ -15,16 +15,14 @@
   height: auto;
   border-radius: 8px;
   border: 2px solid;
-  background-image: linear-gradient(
-    to bottom right,
-    #ffe0e0,
-    #ffe8c0,
-    #fff0a0,
-    #e8f0a0,
-    #d0ffbf,
-    #b0f0ff,
-    #c0c0ff
-  );
+  background-image: linear-gradient(to bottom right,
+      #ffe0e0,
+      #ffe8c0,
+      #fff0a0,
+      #e8f0a0,
+      #d0ffbf,
+      #b0f0ff,
+      #c0c0ff);
   background-clip: padding-box;
 }
 
@@ -72,4 +70,14 @@
   padding: 0.25em 0.5em;
   border-radius: 15px;
   display: inline-block;
+}
+
+.price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.imageContainer {
+  background-color: #28724F;
 }

@@ -1,9 +1,8 @@
-import Detail from "../component/menu/detail/detail";
-import Advertise from "../component/advertise";
-import ResponsiveContainer from "../component/container";
-import Footer from "../component/footer";
-import Navbar from "../component/navbar";
-import SidebarWithMenu from "../component/side-bar/sidebarWithMenu";
+import Advertise from "../template/advertise";
+import ResponsiveContainer from "../template/container";
+import Footer from "../template/footer";
+import Navbar from "../template/navbar";
+import Menu from "../component/menu/menu";
 
 const Secret = () => {
   return (
@@ -11,10 +10,10 @@ const Secret = () => {
       <Navbar />
       <Advertise />
       <ResponsiveContainer>
-        <SidebarWithMenu />
+        <Menu/>
       </ResponsiveContainer>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
