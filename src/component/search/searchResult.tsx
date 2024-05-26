@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./SearchBar.module.css";
+import style from "../../style/SearchBar.module.css";
 interface SearchResultProps {
   result: string;
 }

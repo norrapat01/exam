@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
-  fetchStarbucksDataById,
-  fetchStarbucksDataByName,
+  getAllProduct,
+  getStarbucksDataById,
+  getStarbucksDataByName,
 } from "src/api/api.route";
 import { useNavigate } from "react-router-dom";
-import { Item, ProductItem } from "src/interface/ProductItem";
-import { getAllProduct } from "src/service/service";
-
+import { IStarbucksItem, IProductItem } from "src/interface/ProductItem";
 export const useDetailData = () => {
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -15,13 +14,15 @@ export const useDetailData = () => {
   const query = useQuery();
   const id = query.get("id");
   const name = query.get("name");
-  const [starbucksData, setStarbucksData] = useState<Item | null>(null);
+  const [starbucksData, setStarbucksData] = useState<IStarbucksItem | null>(
+    null
+  );
 
   useEffect(() => {
     const fetchDataById = async () => {
       try {
         if (id) {
-          const response = await fetchStarbucksDataById(Number(id));
+          const response = await getStarbucksDataById(Number(id));
           const data = response[0];
           setStarbucksData(data);
         }
@@ -37,7 +38,7 @@ export const useDetailData = () => {
     const fetchDataByName = async () => {
       try {
         if (name) {
-          const response = await fetchStarbucksDataByName(name);
+          const response = await getStarbucksDataByName(name);
           const data = response[0];
           setStarbucksData(data);
         }
@@ -52,14 +53,11 @@ export const useDetailData = () => {
   return { starbucksData };
 };
 
-
-
-
 export const useStarbucksData = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const navigate = useNavigate();
-  const [productItems, setProductItems] = useState<ProductItem[] | null>(null);
+  const [productItems, setProductItems] = useState<IProductItem[] | null>(null);
   const [searchQuery] = useState("");
   const [selectedGrindOptions, setSelectedGrindOptions] = useState<string>("");
   const [selectRegion, setSelectRegion] = useState<string>("");
@@ -85,7 +83,7 @@ export const useStarbucksData = () => {
     setCurrentPage(page);
   };
 
-  const handleSearchBar = (results: Item[]) => {
+  const handleSearchBar = (results: IStarbucksItem[]) => {
     setSearchResults(results);
   };
 
@@ -114,7 +112,7 @@ export const useStarbucksData = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectRegion, selectedGrindOptions]);
+  }, [selectRegion, selectedGrindOptions]);
 
   const filteredProductItems = handleSearch().filter((item) => {
     if (selectRegion.length > 0 && !selectRegion.includes(item.region))
@@ -126,7 +124,7 @@ export const useStarbucksData = () => {
       return false;
     return true;
   });
-
+  console.log(productItems);
   const itemsPerPage = 12;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -158,8 +156,6 @@ export const useStarbucksData = () => {
     selectRegion,
     selectedGrindOptions,
     handleClearFilter,
-    setSelectedGrindOptions,
-    setSelectRegion,
     grindOptions,
     regions,
     filteredProductItems: currentItems,

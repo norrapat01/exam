@@ -1,14 +1,12 @@
-import React from "react";
 import { Col, Row, Card } from "react-bootstrap";
 import PaginationComponent from "../pagination/pagination";
-import { useStarbucksData } from "./detail/util";
+import { useStarbucksData } from "./util";
 import SearchBar from "../search/searchBar";
 import SearchList from "../search/searchList";
 import SideBar from "../side-bar/side-bar";
-import styles from "./detail/Detail.module.css";
+import styles from "../../style/Detail.module.css";
 const Menu = () => {
   const {
-    starbucksData,
     currentPage,
     totalPages,
     handleCardClick,

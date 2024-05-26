@@ -1,8 +1,6 @@
-import { useStarbucksData } from "../menu/detail/util";
 import { useState } from "react";
-import { fetchStarbucksDataByName } from "src/api/api.route";
-import style from "./SearchBar.module.css";
-import { MdOutlineDangerous } from "react-icons/md";
+import { getStarbucksDataByName } from "src/api/api.route";
+import style from "../../style/SearchBar.module.css";
 interface SearchBarProps {
   setResults: (results: any[]) => void; // Define the type of the setResults prop
 }
@@ -16,7 +14,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ setResults }) => {
       if (value === "") {
         setResults([]);
       } else {
-        data = await fetchStarbucksDataByName(value);
+        data = await getStarbucksDataByName(value);
         setResults(data);
       }
     } catch (error) {

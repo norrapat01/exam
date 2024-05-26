@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "../image/starbucks_corporation_logo.png";
+import logo from "../assert/starbucks_corporation_logo.png";
+import profile from "../assert/user.png";
 const Navbar: React.FC = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
         <div className="container-fluid">
           <a className="navbar-brand ms-5" href="#" style={{ color: "white" }}>
             <Link to="/">
-              <img src={image} width={71} height={71} />
+              <img src={logo} width={71} height={71} />
             </Link>
           </a>
           <button
@@ -23,12 +24,12 @@ const Navbar: React.FC = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon bg-white"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
             <span className="navbar-text me-5" style={{ color: "white" }}>
-              Profile
+              Norrapat Sai-ai<img src={profile} width={30} height={30}/>
             </span>
           </div>
         </div>

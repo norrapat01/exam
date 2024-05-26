@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import { useDetailData } from "./util"; // Importing the custom hook
-import styles from "./Detail.module.css";
+import { useDetailData } from "../util";
+import styles from "../../../style/Detail.module.css";
 
 const Detail: React.FC = () => {
-  const { starbucksData } = useDetailData(); // Using the custom hook
+  const { starbucksData } = useDetailData();
 
   if (!starbucksData) {
     return <div>Loading product details...</div>;

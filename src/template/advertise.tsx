@@ -1,7 +1,6 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-import image from "../image/reserve-coffee-2-1200x800.jpg";
-import "./Advertise.css"; // Import CSS for styling
+import image from "../assert/reserve-coffee-2-1200x800.jpg";
+import "../style/Advertise.module.css"; // Import CSS for styling
 
 const Advertise: React.FC = () => {
   return (

@@ -12,7 +12,6 @@ const Secret = () => {
       <ResponsiveContainer>
         <Menu/>
       </ResponsiveContainer>
-
       <Footer />
     </>
   );
