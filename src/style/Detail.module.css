@@ -72,8 +72,10 @@
   display: inline-block;
 }
 
+
 .price {
   display: flex;
+  margin-top: auto;
   justify-content: flex-end;
   align-items: flex-end;
 }
@@ -85,6 +87,7 @@
 .menu {
   margin-bottom: 20px;
   width: 15rem;
+  height: 21rem;
   text-Align: left;
   transition: box-shadow 0.3s ease;
 }

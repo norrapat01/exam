@@ -67,7 +67,7 @@ const Menu = () => {
                         {value.grind_option}
                       </div>
                       <Card.Text className={styles.price}>
-                        {Math.floor(value.price * 36.64)} Batht
+                        {Math.floor(value.price * 36.64)} Baht
                       </Card.Text>
                     </Card.Body>
                   </Card>

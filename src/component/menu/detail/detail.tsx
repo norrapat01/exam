@@ -42,7 +42,7 @@ const Detail: React.FC = () => {
                     {productName}
                   </Card.Title>
                   <Card.Text className={styles.grid}>
-                    {grind_option[0]}
+                    {grind_option}
                   </Card.Text>
                   <Card.Text className={styles.detailDescription}>
                     {description}
@@ -59,7 +59,7 @@ const Detail: React.FC = () => {
                       <Card.Text className={styles.detailGrind}>
                         <strong>Grind Options:</strong>
                         <br />
-                        {grind_option.join(", ")}
+                        {grind_option}
                       </Card.Text>
                     </Col>
                   </Row>
