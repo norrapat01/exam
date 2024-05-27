@@ -1,3 +1,4 @@
+import FlavorDropdown from "../flavorProfile/flavorDropDown";
 import style from "../../style/SideBar.module.css";
 
 const SideBar = ({
@@ -49,7 +50,7 @@ const SideBar = ({
       <div>
         <h4>Grind Option</h4>
         {grindOptions.map((grindOption) => (
-          <div key={grindOption} className={style.checkboxContainer} >
+          <div key={grindOption} className={style.checkboxContainer}>
             <input
               type="checkbox"
               id={grindOption}
@@ -60,6 +61,9 @@ const SideBar = ({
             <label htmlFor={grindOption}>{grindOption}</label>
           </div>
         ))}
+      </div>
+      <div className={style.checkboxContainer}>
+        <FlavorDropdown />
       </div>
       <button
         type="button"

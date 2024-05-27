@@ -140,7 +140,9 @@ export const useStarbucksData = () => {
   const grindOptions = Array.from(
     new Set(productItems?.map((item) => item.grind_option) || [])
   );
-
+  const flavorProfiles = Array.from(
+    new Set(productItems?.map((item) => item.flavor_profile) || [])
+  );
   return {
     starbucksData: currentItems,
     currentPage,
@@ -159,6 +161,7 @@ export const useStarbucksData = () => {
     grindOptions,
     regions,
     filteredProductItems: currentItems,
+    flavorProfiles
   };
 };
 
