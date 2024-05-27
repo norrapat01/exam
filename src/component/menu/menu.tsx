@@ -25,8 +25,8 @@ const Menu = () => {
 
   return (
     <>
-      <Row style={{ paddingLeft: "40px", paddingRight: "40px" }}>
-        <Col md={2}>
+      <Row>
+        <Col xs={12} md={3} style={{ paddingLeft: "80px" }}>
           <SideBar
             regions={regions}
             selectedRegions={selectRegion}
@@ -37,11 +37,11 @@ const Menu = () => {
             onClearFilters={handleClearFilter}
           />
         </Col>
-        <Col md={9}>
+        <Col xs={12} md={8}>
           <SearchBar setResults={handleSearchBar} />
           <div className="container">
             <SearchList results={searchResults} />
-            <Row className="justify-content-center m-lg-5">
+            <Row className="justify-content-center m-lg-5" xs={1} md={2} lg={3}>
               {filteredProductItems?.map((value) => (
                 <Col md={4} key={value.id}>
                   <Card
