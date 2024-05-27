@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getStarbucksDataByName } from "src/api/api.route";
 import style from "../../style/SearchBar.module.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const SearchBar = ({
   setResults,
@@ -33,7 +34,9 @@ const SearchBar = ({
     fetchData("");
   };
 
+  const navigate = useNavigate();
   const handleSearchClick = () => {
+    navigate(`detail?name=${input}`);
     fetchData(input);
   };
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
-  getAllProduct,
+  getStarbucksAll,
   getStarbucksDataById,
   getStarbucksDataByName,
 } from "src/api/api.route";
@@ -65,7 +65,7 @@ export const useStarbucksData = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const products = await getAllProduct();
+        const products = await getStarbucksAll();
         setProductItems(products);
       } catch (error) {
         console.error("Error fetching products:", error);

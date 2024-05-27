@@ -22,7 +22,7 @@ const Menu = () => {
     regions,
     filteredProductItems,
   } = useStarbucksData();
-  console.log(filteredProductItems);
+
   return (
     <>
       <Row style={{ paddingLeft: "40px", paddingRight: "40px" }}>
@@ -64,7 +64,7 @@ const Menu = () => {
                         className={styles.grid}
                         style={{ textAlign: "right" }}
                       >
-                        {value.grind_option}
+                        {value.grind_option[0]}
                       </div>
                       <Card.Text className={styles.price}>
                         {Math.floor(value.price * 36.64)} Batht

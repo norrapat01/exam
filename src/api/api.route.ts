@@ -1,6 +1,5 @@
 import axios from "axios";
 import { IProductItem, IStarbucksItem } from "src/interface/ProductItem";
-import httpClient from "./httpClient";
 
 const API_URL = "https://6650ac8dec9b4a4a6032f7e6.mockapi.io/api/Starbuck";
 
@@ -59,6 +58,12 @@ export const getStarbucksDataByOption = async (
   }
 };
 
-export const getAllProduct = async (): Promise<IProductItem[]> => {
-  return httpClient.get("starbuck-product").then(({ data }) => data);
+export const getStarbucksAll = async (): Promise<IProductItem[]> => {
+  try {
+    const response = await axios.get(API_URL);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching Starbucks data:", error);
+    throw error;
+  }
 };
