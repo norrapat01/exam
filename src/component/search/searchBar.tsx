@@ -36,7 +36,11 @@ const SearchBar = ({
 
   const navigate = useNavigate();
   const handleSearchClick = () => {
-    navigate(`detail?name=${input}`);
+    if (input == "") {
+      navigate(``);
+    } else {
+      navigate(`/detail?name=${input}`);
+    }
     fetchData(input);
   };
 
