@@ -64,7 +64,7 @@ const Menu = () => {
                         className={styles.grid}
                         style={{ textAlign: "right" }}
                       >
-                        {value.grind_option[0]}
+                        {value.grind_option}
                       </div>
                       <Card.Text className={styles.price}>
                         {Math.floor(value.price * 36.64)} Batht
