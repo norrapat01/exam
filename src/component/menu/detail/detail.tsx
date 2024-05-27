@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { GreenCircle, useDetailData } from "../util";
 import styles from "../../../style/Detail.module.css";
+import ImageCarousel from "../../slidePicture/picture";
 
 const Detail: React.FC = () => {
   const { starbucksData } = useDetailData();
@@ -31,19 +32,13 @@ const Detail: React.FC = () => {
             <Card.Body>
               <Row>
                 <Col md={5}>
-                  <Card.Img
-                    src={image_url}
-                    alt={`${productName} Coffee`}
-                    className={styles.detailImage}
-                  />
+                  <ImageCarousel images={[image_url]} />
                 </Col>
                 <Col md={7} style={{ textAlign: "left" }}>
                   <Card.Title className={styles.detailTitle}>
                     {productName}
                   </Card.Title>
-                  <Card.Text className={styles.grid}>
-                    {grind_option}
-                  </Card.Text>
+                  <Card.Text className={styles.grid}>{grind_option}</Card.Text>
                   <Card.Text className={styles.detailDescription}>
                     {description}
                   </Card.Text>
